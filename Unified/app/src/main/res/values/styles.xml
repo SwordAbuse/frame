@@ -1,0 +1,67 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!--
+        <item name="toolbarStyle">@style/Widget.Toolbar</item>
+        <item name="toolbarNavigationButtonStyle">@style/Widget.ToolbarNavigationButtonStyle</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+        <item name="actionOverflowMenuStyle">@style/Widget.PopupMenu.Overflow</item>
+        -->
+
+        <!--顶部导航条中的Icon和二级字体的颜色-->
+        <item name="colorControlNormal">@color/white_alpha_240</item>
+        <item name="colorControlActivated">@color/textPrimary</item>
+    </style>
+
+    <style name="AppTheme.TransStatusBar.Base" parent="AppTheme">
+        <!--去除顶部的状态栏-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="AppTheme.TransStatusBar" parent="AppTheme.TransStatusBar.Base" />
+
+    <style name="AppTheme.Main" parent="AppTheme.TransStatusBar">
+        <item name="toolbarTitleColor">@color/white</item>
+        <item name="toolbarMenuIconColor">@color/white</item>
+        <item name="colorControlHighlight">@color/textSecond</item>
+        <item name="android:windowBackground">@color/windowsBackgroundLight</item>
+    </style>
+
+    <!--账户主题-->
+    <style name="AppTheme.Account" parent="AppTheme.TransStatusBar" />
+
+    <!-- 水平分割线======= -->
+    <style name="style_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+    <style name="style_line_horizontal_translate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <!-- 垂直分割线 -->
+    <style name="style_line_vertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/grey_300</item>
+    </style>
+
+
+
+</resources>
+
