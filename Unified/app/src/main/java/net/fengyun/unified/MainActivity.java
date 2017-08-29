@@ -2,11 +2,9 @@ package net.fengyun.unified;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
 import net.fengyun.common.app.Activity;
-import net.fengyun.factory.persistence.Account;
-import net.fengyun.unified.activities.AccountActivity;
+import net.fengyun.unified.activities.CustomCameraActivity;
 
 public class MainActivity extends Activity {
 
@@ -18,17 +16,22 @@ public class MainActivity extends Activity {
         context.startActivity(new Intent(context, MainActivity.class));
     }
 
-    @Override
-    protected boolean initArgs(Bundle bundle) {
-        if (Account.isComplete()) {
-            //判断用户是否完全，完全走正常流程
-            return super.initArgs(bundle);
-        } else {
-            AccountActivity.show(this);
-            //返回false会自动关闭activity
-            return false;
-        }
+//    @Override
+//    protected boolean initArgs(Bundle bundle) {
+//        if (Account.isComplete()) {
+//            //判断用户是否完全，完全走正常流程
+//            return super.initArgs(bundle);
+//        } else {
+//            AccountActivity.show(this);
+//            //返回false会自动关闭activity
+//            return false;
+//        }
+//    }
 
+    @Override
+    protected void initData() {
+        super.initData();
+        CustomCameraActivity.show(this);
     }
 
     @Override
